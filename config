@@ -1,0 +1,85 @@
+// --- Normal entrance --- //
+0x14813
+0x1491c
+0x2
+
+// --- Scroll edges --- //
+0x1491D
+0x14D44
+0x8
+
+// --- Normal Entrance Y Scroll --- //
+0x14d45
+0x14e4e
+0x2
+
+// --- Normale Entrance X Scroll --- //
+0x14e4f
+0x14f58
+0x2
+
+// --- Normal Entrance Y Coordinates --- //
+0x14F59
+0x15062
+0x2
+
+// --- Normal Entrance X Coordinates --- //
+0x15063
+0x1516c
+0x2
+
+// --- Normal Entrance X Camera Coordinates --- //
+0x1516d
+0x15276
+0x2
+
+// --- Normal Entrance Y Camera Coordinates --- //
+0x15277
+0x15380
+0x2
+
+// --- Normal Entrance Blocksets --- //
+0x15381
+0x15405
+0x1
+
+// --- Normal entrance Floor values --- //
+0x15406
+0x1548a
+0x1
+
+// --- Normal entrance Dungeon values --- //
+0x1548b
+0x1550f
+0x1
+
+// --- Normal entrance doorway type data --- //
+0x15510
+0x15594
+0x1
+
+// --- Normal entrance ladder and bg settings --- //
+0x15595
+0x15619
+0x1
+
+// --- Normal entrance horizontal and vertical scroll properties --- //
+0x1561a
+0x1569e
+0x1
+
+// --- normal entrance scroll quandrant --- //
+0x1569f
+0x15723
+0x1
+
+// --- Normal entrance exit door location --- //
+0x15724
+0x1582d
+0x2
+
+// --- Normal entrance dungeon music --- //
+0x1582e
+0x158b2
+0x1
+
