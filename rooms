@@ -1,4 +1,5 @@
-// #### This configuration will randomize entrances and exits #### //
+// #### This configuration will randomize entrances and exits, exits at 15d8a #### //
+
 // --- Normal entrance --- //
 0x14813
 0x1491c

@@ -24,6 +24,11 @@ struct ranVal
 	vector<uint> adrList;
 };
 
+char* randEntrances(char* content, ranVal obj)
+{
+
+}
+
 vector<int> getIndices(uint size)
 {
 	srand ( unsigned ( std::time(0)  )  );
@@ -167,6 +172,21 @@ map<int, ranVal> readConfig(string filename)
 	return t;
 }
 
+char* devMode(char* t)
+{
+	char* test = t;
+	char copyCode[0x3c];
+	for(int i=0;i<0x3c;++i)
+	{
+		copyCode[i] = test[0x2748a+i];
+	}
+	for(int i=0;i<0x3c;++i)
+	{
+		test[0x2748a+0x3c+i] = copyCode[i];
+	}
+	return test;
+}
+
 int main(int argc, char** argv)
 {
 	if(argc < 3)
@@ -190,6 +210,7 @@ int main(int argc, char** argv)
 		config = argv[4];
 	}
 	// ********* INITIALIZATION ************ //
+	bool dev = true;
 	uint vecSize;
 	map<int, ranVal> Values = readConfig(config);
 	if(Values[0].max != 0)
@@ -221,6 +242,10 @@ int main(int argc, char** argv)
 		f.seekg(0, ios::beg);
 		f.read(memblock, size);
 		f.close();
+
+		// Dev mode //
+		if(dev)
+			memblock = devMode(memblock);
 
 		cout << "start loop " << endl;
 		for(map<int, ranVal>::iterator it=Values.begin(); it!=Values.end(); ++it)
