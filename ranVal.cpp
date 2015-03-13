@@ -188,12 +188,11 @@ void ranValWrap::randEntrances()
 	string ventr, vexit;
 	bool skip;
 	char* content_c = content;
-	vector<int> unshuffled, back;
+	vector<int> unshuffled;
 
 	for(int i=0; i<numentrances; ++i)
 	{
 		skip = false;
-		back.push_back(i);
 		ventr = content[entrances[i].min+i*entrances[i].size];
 		for(int j=0; j<numexits; ++j)
 		{
@@ -209,21 +208,10 @@ void ranValWrap::randEntrances()
 		unshuffled.push_back(i);
 	}
 
-	unshuffled.clear();
-	// Gets the inverse of unshuffled
-	for(vector<int>::iterator it=back.begin(); it!=back.end(); ++it)
-	{
-		for(vector<int>::iterator jt=unshuffled.begin(); jt!=unshuffled.end(); ++jt)
-		{
-			if((*it) == (*jt))
-				back.erase(it);
-		}
-	}
-
-	vector<int> shuffled = shuffle(back);
+	vector<int> shuffled = shuffle(unshuffled);
 	// Randomize all entries in the config
 	for(int k=0; k<numentries; ++k)
 	{
-		randomRange(entrances[k], shuffled, back);
+		randomRange(entrances[k], shuffled, unshuffled);
 	}
 }
