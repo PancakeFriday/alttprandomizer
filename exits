@@ -1,4 +1,5 @@
 // --- This config will randomize exits -- //
+
 // Rooms that exit to overworld areas
 0x15d8a
 0x15e27
